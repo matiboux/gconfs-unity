@@ -20,4 +20,13 @@ public class Projectile : MonoBehaviour
         duration -= Time.deltaTime;
         if (duration <= 0f) Destroy(gameObject);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
