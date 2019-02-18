@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public float speed;
     [SerializeField] private GameObject body;
+    public GameObject projectilePrefab;
+    public GameObject projectileSpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,18 @@ public class Player : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 100))
             body.transform.LookAt(new Vector3(hit.point.x, body.transform.position.y, hit.point.z));
+
+        // Shoot a projectile on Fire
+        // (i) Quaternion.identity
+        if (Input.GetButtonDown("Fire1"))
+        {
+            // Instantiate a new object
+            Instantiate(
+                projectilePrefab, // The object to instantiate
+                projectileSpawn.transform.position, // The position where to instantiate it
+                Quaternion.identity // Identity Rotation (no rotation)
+                );
+        }
     }
 
     // Update is called when physics are updated

@@ -616,6 +616,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   body: {fileID: 1647667885}
+  projectilePrefab: {fileID: 533879512573782406, guid: 75d05077f19f3bc48a2dc1e713e97f84,
+    type: 3}
+  projectileSpawn: {fileID: 1659328297}
 --- !u!54 &1681905322
 Rigidbody:
   m_ObjectHideFlags: 0
