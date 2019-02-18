@@ -9,11 +9,17 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    // Update is called when physics are updated
+    void FixedUpdate()
     {
         // Input.GetAxis(): Get Axis value
         // Time.deltaTime: Time since last frame
