@@ -23,8 +23,8 @@ public class Player : MonoBehaviour
     {
         // Input.GetAxis(): Get Axis value
         // Time.deltaTime: Time since last frame
-        float horizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
-        float vertical = Input.GetAxis("Vertical") * Time.deltaTime;
+        float horizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+        float vertical = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
         // Move the object
         transform.Translate(new Vector3(horizontal, 0f, vertical));
