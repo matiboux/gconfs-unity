@@ -141,6 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4800e53bfe1d541b272cdbf6dfc39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 8995530578319177030, guid: 9842fbe8d6b32f34e93c821b932843ff,
+    type: 3}
+  min: -20
+  max: 20
+  delay: 5
 --- !u!4 &131271154
 Transform:
   m_ObjectHideFlags: 0
