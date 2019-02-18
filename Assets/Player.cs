@@ -27,11 +27,13 @@ public class Player : MonoBehaviour
         // (i) Quaternion.identity
         if (Input.GetButtonDown("Fire1"))
         {
+            // (i) Quaternion.identity: Identity Rotation (no rotation)
+
             // Instantiate a new object
             Instantiate(
                 projectilePrefab, // The object to instantiate
                 projectileSpawn.transform.position, // The position where to instantiate it
-                Quaternion.identity // Identity Rotation (no rotation)
+                body.transform.rotation
                 );
         }
     }
