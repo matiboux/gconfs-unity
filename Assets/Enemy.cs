@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int health;
     private Rigidbody rb;
     private GameObject player;
     public float speed;
@@ -27,5 +28,12 @@ public class Enemy : MonoBehaviour
             transform.forward.x * speed, // Move forward
             curV.y, //
             transform.forward.z * speed); // Move forward
+    }
+
+    public void Hit(int damage)
+    {
+        health -= damage;
+        if (health <= 0) Destroy(gameObject);
+
     }
 }
